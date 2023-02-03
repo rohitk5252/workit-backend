@@ -6,7 +6,11 @@ const app = express();
 const mongoose = require('mongoose');
 const workoutRoutes = require('./routes/workouts');
 const userRoutes = require('./routes/user')
+const cors = require('cors');
 
+
+// for Cross Origin Requests
+app.use(cors());
 //  Checks if the req has a body ( data ) ,
 // if yes then it parses it and attaches it to the REQ Object
 // So that we can access it in the request handler 
